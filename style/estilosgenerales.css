@@ -23,7 +23,7 @@ h1 {
     font-family: 'Roboto', sans-serif; /* Cambiar tipo de fuente */
     position: relative;
 }
-h1:after {
+h2:after {
     content: '';
     display: block;
     width: 50%;
@@ -31,7 +31,7 @@ h1:after {
     background: black;
     margin: 0.5em auto;
 }
-h1:before {
+h2:before {
     content: '';
     display: block;
     width: 30%;
@@ -39,14 +39,13 @@ h1:before {
     background: black;
     margin: 0.5em auto;
 }
-h5 {
+h2,h5 {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 p, .card-text, .form-control, .form-select, .form-group label {
     text-align: justify;
 }
-
-
 
 
 .btn-social {
@@ -89,4 +88,53 @@ p, .card-text, .form-control, .form-select, .form-group label {
 }
 .card,.mb-3 {
   background-color: rgb(236, 236, 236);
+}
+                                          /* Seccion de Restaurantes etc  */
+                                          /* Seccion de Restaurantes etc  */
+                                          /* Seccion de Restaurantes etc  */
+
+
+
+.restaurant-card {
+      margin-bottom: 30px;
+}
+.carousel-inner img {
+      width: 100%;
+      height: 100%;}
+.card-img-left {
+      width: 40%;
+      overflow: hidden;
+}
+.card-body {
+      flex: 1 1 auto;
+      padding: 1.25rem;
+}
+.action-buttons {
+      display: flex;
+      justify-content: space-between;
+}
+
+                                          /* Pagina de Mendoza , contenedores de pagina en construccion  */
+                                          /* Pagina de Mendoza , contenedores de pagina en construccion  */
+                                          /* Pagina de Mendoza , contenedores de pagina en construccion  */
+
+.construction-container {
+  text-align: center;
+  background-color: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.construction-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.construction-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center
+}
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
 }
