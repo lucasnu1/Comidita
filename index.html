@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./style/estilosgenerales.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    <!-- Navbar -->
+       <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+              <img src="./assets/comiditalogo.png" alt="logo_comidita" width="75" height="75">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="./pages/inicio.html">¿Quiénes somos?</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./pages/postres.html">Postres</a>
+                  </li>
+                  <li class="nav-item dropdown">   
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Restaurantes
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="./pages/restaurantes.html">Buenos Aires</a></li>
+                          <li><a class="dropdown-item" href="./pages/restaurantes.html">Córdoba</a></li>
+                          <li><a class="dropdown-item" href="./pages/restaurantes.html">Mendoza</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                  </li>
+              </ul>
+              <form class="d-flex me-2" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                  <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+              </form>
+              <a href="#" class="btn btn-outline-primary me-2" aria-label="Carrito de Compras">
+                  <i class="fas fa-shopping-cart"></i>
+              </a>
+              <a href="#" class="btn btn-outline-secondary" aria-label="Iniciar Sesión">
+                  <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+              </a>
+          </div>
+      </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <!--main-->
+    <main>
+        <div class="container mt-5">
+          <h1>Desayunos</h1>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/desayuno1.jpg" class="card-img-top" alt="Yogurt de avellanas y vainilla">
+                      <div class="card-body">
+                          <h5 class="card-title">Yogurt de avellanas y vainilla</h5>
+                          <p class="card-text">Si quieres desayunar este delicioso yogur de avellanas y vainilla, te recomendamos que lo prepares con antelación, ya que necesita 24 horas de reposo. ¡Pero merece la pena, porque está para chuparse los dedos!</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado hace 20 minutos</small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/desayuno2.jpeg" class="card-img-top" alt="Cafe Colombiano con medialuna">
+                      <div class="card-body">
+                          <h5 class="card-title">Cafe Colombiano con medialuna</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado hace 4 días</small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/desayuno3.jpg" class="card-img-top" alt="Crumble de manzana con maiz">
+                      <div class="card-body">
+                          <h5 class="card-title">Crumble de manzana con maiz</h5>
+                          <p class="card-text">El crumble de manzana es un postre tradicional inglés que se realiza a base de fruta, harina, mantequilla y azúcar. Sin embargo, podemos disfrutar del crumble de una forma más san gracias a esta versión con maíz.</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado hace 2 semanas</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <h1>Almuerzos</h1>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/almuerzo1.jpg" class="card-img-top" alt="Cestitas de ensalada de mariscos">
+                      <div class="card-body">
+                          <h5 class="card-title">Cestitas de ensalada de mariscos</h5>
+                          <p class="card-text">Los mejillones son un marisco delicioso y que cuentan con un elevado contenido en vitamina A, vitaminas del grupo B, vitamina C, D, E y K. También tienen propiedades antiinflamatorias debido al alto contenido en ácidos grasos omega-3. Por su parte, las gambas son ricas en vitaminas B3, B12, D, E y K, y tienen un alto contenido en proteínas y minerales, como el yodo.</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado 11 sept 2023.</small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/almuerzo2.jpg" class="card-img-top" alt="Brochetas de pollo de calabaza">
+                      <div class="card-body">
+                          <h5 class="card-title">Brochetas de pollo de calabaza</h5>
+                          <p class="card-text">Si estás buscando recetas con calabaza para almuerzos saludables, la que incluyen pollo son perfectas, ya que esta carne es baja en grasa y en calorías, y sirve casi de brunch por sus ingredientes. Es casi un menú completo.</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Recién publicado.</small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/almuerzo3.jpg" class="card-img-top" alt="Conejo con ensalada ibicenca">
+                      <div class="card-body">
+                          <h5 class="card-title">Conejo con ensalada ibicenca</h5>
+                          <p class="card-text">El conejo es una carne blanca que destaca por su bajo contenido en grasa y su alto contenido en proteínas, por lo que es perfecta para cualquier dieta. La ensalada ibicenca con productos frescos de la región acompañada de conejo asado al horno o a la parrilla.</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado hace 1 semana.</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <h1>Cenas</h1>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/cena1.jpg" class="card-img-top" alt="guiso_de_lenteja">
+                      <div class="card-body">
+                          <h5 class="card-title">Guiso de lentejas</h5>
+                          <p class="card-text">El invierno es quizás el momento más difícil para pensar en comida saludable porque siempre tendemos a asociarlas a las ensaladas. Pero felizmente, también hay comidas sustanciosas muy buenas para el organismo como el guiso de lentejas que nos va a dar calorías, ingredientes variados y todos los beneficios de las lentejas.</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado hace 3 horas.</small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/cena2.jpg" class="card-img-top" alt="tortillas_de_espinacas">
+                      <div class="card-body">
+                          <h5 class="card-title">Tortilla de espinacas</h5>
+                          <p class="card-text">Un sartén donde no se pegue la comida, un poquito de aceite y en 5 minutos tenemos una tortilla de espinaca fácil y en 4 pasos. La espinaca es nutritiva, ayuda a la digestión, en su estación está económica e incluso se puede comer cruda como te contamos en la receta. Es un muy buen ingrediente para tener en cuenta al momento de tus compras.</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado hace 2 días.</small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 d-flex flex-column">
+                      <img src="./assets/cena3.jpg" class="card-img-top" alt="berenjenas_a_la_parmesana">
+                      <div class="card-body">
+                          <h5 class="card-title">Berenjenas a la parmesana</h5>
+                          <p class="card-text">Esta receta se ve tan apetitosa que no vas a poder creer que sea una buena idea de cena saludable pero sí. Las berenjenas a la parmesana son una receta italiana tan deliciosa y fácil de hacer que se puede usar como plato principal en la cena o como acompañamiento. Berenjenas, tomate, queso, cebolla y albahaca… ¡Bocato di cardinale!</p>
+                          <a href="#" class="btn btn-primary">Ver la receta...</a>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <select class="form-select quantity-selector me-2">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                          <button class="btn btn-outline-primary" type="button">
+                              <i class="fas fa-shopping-cart"></i> Agregar
+                          </button>
+                      </div>
+                      <div class="card-footer">
+                          <small class="text-body-secondary">Publicado hace 10 minutos.</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center text-lg-start mt-5">
+      <div class="container p-4">
+          <div class="row">
+              <!-- comidita Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Comidita</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#" class="text-white">Menu de la semana</a></li>
+                      <li><a href="#" class="text-white">Cóomo funciona</a></li>
+                      <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
+                      <li><a href="#" class="text-white">FAQ'S</a></li>
+                      <li><a href="#" class="text-white">Carrito</a></li>
+                      <li><a href="#" class="text-white">Crear cuenta</a></li>
+                      <li><a href="#" class="text-white">Iniciar sesión</a></li>
+                  </ul>
+              </div>
+
+              <!-- Empresa Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Empresa</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#" class="text-white">¿Cómo funciona?</a></li>
+                      <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
+                      <li><a href="#" class="text-white">Sistemas de Envíos</a></li>
+                      <li><a href="#" class="text-white">Plastic Neutral</a></li>
+                      <li><a href="#" class="text-white">Productos y servicios</a></li>
+                      <li><a href="#" class="text-white">Menú de la semana</a></li>
+                      <li><a href="#" class="text-white">Comidas para empresa</a></li>
+                      <li><a href="#" class="text-white">Recargar el monedero</a></li>
+                  </ul>
+              </div>
+
+              <!-- Información Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Información</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#" class="text-white">Preguntas frecuentes</a></li>
+                      <li><a href="#" class="text-white">Política de privacidad</a></li>
+                      <li><a href="#" class="text-white">Términos y condiciones de uso</a></li>
+                      <li><a href="#" class="text-white">Aviso legal</a></li>
+                      <li><a href="#" class="text-white">Envíos</a></li>
+                      <li><a href="#" class="text-white">Devoluciones</a></li>
+                  </ul>
+              </div>
+
+              <!-- Contacto Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Contacto</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="./pages/contacto.html" class="text-white">Contacta con nosotros</a></li>
+                      <li><a href="mailto:info@knoweats.com" class="text-white">info@comidita.com</a></li>
+                      <li><a href="#" class="text-white">¡Pregúntanos por WhatsApp!</a></li>
+                  </ul>
+                  <div class="mt-3">
+                      <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Facebook">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Twitter">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Instagram">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="LinkedIn">
+                          <i class="fab fa-linkedin-in"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Derechos de autor -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Comidita. Todos los derechos reservados.
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

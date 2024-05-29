@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comidita</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../style/estilosgenerales.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/comiditalogo.png" alt="logo_comidita" width="75" height="75">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./inicio.html">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./postres.html">Postres</a>
+                    </li>
+                    <li class="nav-item dropdown"> 
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Restaurantes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./restaurantes.html">Buenos Aires</a></li>
+                            <li><a class="dropdown-item" href="./restaurantes.html">Córdoba</a></li>
+                            <li><a class="dropdown-item" href="./restaurantes.html">Mendoza</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Otra parte del mundo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-2" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="#" class="btn btn-outline-primary me-2" aria-label="Carrito de Compras">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="btn btn-outline-secondary" aria-label="Iniciar Sesión">
+                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="container mt-5">
+        <h1>Postres Fresco</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100 d-flex flex-column">
+                    <img src="../assets/postre1.jpg" class="card-img-top" alt="Yogurt de avellanas y vainilla">
+                    <div class="card-body">
+                        <h5 class="card-title">Flan frutal</h5>
+                        <p class="card-text">Un postre saludable y rico es la mezcla de fruta con flan. Además, es un postre que pueden comer también los veganos, así que no tendrás problemas con ninguno de tus invitados.</p>
+                        <a href="#" class="btn btn-primary">Ver la receta...</a>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                      <select class="form-select quantity-selector me-2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                        <button class="btn btn-outline-primary" type="button">
+                            <i class="fas fa-shopping-cart"></i> Agregar
+                        </button>
+                        <button class="btn btn-outline-warning" type="button">
+                          <i class="fas fa-star"></i> Favoritos
+                      </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 d-flex flex-column">
+                    <img src="../assets/postre2.jpg" class="card-img-top" alt="Yogourt_dorado">
+                    <div class="card-body">
+                        <h5 class="card-title">Yogourt dorado a la curcuma</h5>
+                        <p class="card-text">Una de las preparaciones más fáciles que está triunfando entre los amantes de la cúrcuma es el yogur natural con una cucharadita de aceite de coco, otra de cúrcuma en polvo y de pimienta negra molida.</p>
+                        <a href="#" class="btn btn-primary">Ver la receta...</a>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                      <select class="form-select quantity-selector me-2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                        <button class="btn btn-outline-primary" type="button">
+                            <i class="fas fa-shopping-cart"></i> Agregar
+                        </button>
+                        <button class="btn btn-outline-warning" type="button">
+                          <i class="fas fa-star"></i> Favoritos
+                      </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>Nuestros mas elegidos</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+              <div class="card h-100 d-flex flex-column">
+                  <img src="../assets/postre3.jpg" class="card-img-top" alt="yogur_de_piña">
+                  <div class="card-body">
+                      <h5 class="card-title">Carpaccio de piña con yogur</h5>
+                      <p class="card-text">El carpaccio es un plato que solo con su nombre ya queda bien. Así que si les dices a tus invitados que has preparado un carpaccio de piña con yogur que, además, solo tiene 171 kcal. Un postre saludable y muy apetecible.</p>
+                      <a href="#" class="btn btn-primary">Ver la receta...</a>
+                  </div>
+                  <div class="card-footer d-flex justify-content-between align-items-center">
+                    <select class="form-select quantity-selector me-2">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
+                      <button class="btn btn-outline-primary" type="button">
+                          <i class="fas fa-shopping-cart"></i> Agregar
+                      </button>
+                      <button class="btn btn-outline-warning" type="button">
+                        <i class="fas fa-star"></i> Favoritos
+                    </button>
+                  </div>
+              </div>
+          </div>  
+          <div class="col">
+              <div class="card h-100 d-flex flex-column">
+                  <img src="../assets/postre4.jpg" class="card-img-top" alt="yogur_de_piña">
+                  <div class="card-body">
+                      <h5 class="card-title">Brownie con frutas</h5>
+                      <p class="card-text">Hay muchas formas de disfrutar de un brownie. Si quieres hacerlo de una forma más fit y libre de azúcares, prueba la receta que te proponemos a continuación.</p>
+                      <a href="#" class="btn btn-primary">Ver la receta...</a>
+                  </div>
+                  <div class="card-footer d-flex justify-content-between align-items-center">
+                    <select class="form-select quantity-selector me-2">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
+                      <button class="btn btn-outline-primary" type="button">
+                          <i class="fas fa-shopping-cart"></i> Agregar
+                      </button>
+                      <button class="btn btn-outline-warning" type="button">
+                        <i class="fas fa-star"></i> Favoritos
+                    </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+        </div>
+        <div class="container mt-5">
+      <h1>Postres Frios</h1>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+              <div class="card h-100 d-flex flex-column">
+                  <img src="../assets/postre5.jpg" class="card-img-top" alt="flan_de_manzana">
+                  <div class="card-body">
+                      <h5 class="card-title">Flan de manzana</h5>
+                      <p class="card-text">El flan es uno de los postres más tradicionales y que más gustan en nuestro país. Aunque el más típico es el de huevo, existe el de vainilla, café y por supuesto este delicioso flan de manzanas que tan solo contiene 165 kcal.</p>
+                      <a href="#" class="btn btn-primary">Ver la receta...</a>
+                  </div>
+                  <div class="card-footer d-flex justify-content-between align-items-center">
+                    <select class="form-select quantity-selector me-2">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
+                      <button class="btn btn-outline-primary" type="button">
+                          <i class="fas fa-shopping-cart"></i> Agregar
+                      </button>
+                      <button class="btn btn-outline-warning" type="button">
+                        <i class="fas fa-star"></i> Favoritos
+                    </button>
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card h-100 d-flex flex-column">
+                  <img src="../assets/postre6.jpg" class="card-img-top" alt="cheesecake_de_arandanos">
+                  <div class="card-body">
+                      <h5 class="card-title">Cheesecake de arandanos</h5>
+                      <p class="card-text">El pastel de queso es uno de los postres más conocidos de la repostería americana. Delicioso e irresistible, sorprende a tus invitados con esta receta baja en calorías, presentándola en vasitos en lugar de una tarta.</p>
+                      <a href="#" class="btn btn-primary">Ver la receta...</a>
+                  </div>
+                  <div class="card-footer d-flex justify-content-between align-items-center">
+                    <select class="form-select quantity-selector me-2">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
+                      <button class="btn btn-outline-primary" type="button">
+                          <i class="fas fa-shopping-cart"></i> Agregar
+                      </button>
+                      <button class="btn btn-outline-warning" type="button">
+                        <i class="fas fa-star"></i> Favoritos
+                    </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <h1>Para tomar el mate</h1>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card h-100 d-flex flex-column">
+                <img src="../assets/postre7.jpg" class="card-img-top" alt="macarons_de_crema_con_queso">
+                <div class="card-body">
+                    <h5 class="card-title">Macarons de crema con queso</h5>
+                    <p class="card-text">Los macarons son delicados y exquisitos. Estos dulces de origen francés son como pequeños pastelitos hechos con dos galletas y una crema o ganache entre ambas. En este caso, están rellenos de crema de queso. La receta es para elaborar 10 macarons que contienen un total de 200 kcal.</p>
+                    <a href="#" class="btn btn-primary">Ver la receta...</a>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <select class="form-select quantity-selector me-2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                    <button class="btn btn-outline-primary" type="button">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
+                    <button class="btn btn-outline-warning" type="button">
+                      <i class="fas fa-star"></i> Favoritos
+                  </button>
+                </div>
+            </div>
+        </div>  
+        <div class="col">
+            <div class="card h-100 d-flex flex-column">
+                <img src="../assets/postre4.jpg" class="card-img-top" alt="mini_polos_de_fruta">
+                <div class="card-body">
+                    <h5 class="card-title">Mini polos de fruta</h5>
+                    <p class="card-text">Ideales para los niños pero también para mayores, pues se tarda un santiamén en hacerlos, y solo llevan 140 kcal. ¡Prepáralos con tus peques y pasaréis una mañana muy agradable!</p>
+                    <a href="#" class="btn btn-primary">Ver la receta...</a>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <select class="form-select quantity-selector me-2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                    <button class="btn btn-outline-primary" type="button">
+                        <i class="fas fa-shopping-cart"></i> Agregar
+                    </button>
+                    <button class="btn btn-outline-warning" type="button">
+                      <i class="fas fa-star"></i> Favoritos
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center text-lg-start mt-5">
+      <div class="container p-4">
+          <div class="row">
+              <!--Comidita Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Comidita</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#" class="text-white">Menu de la semana</a></li>
+                      <li><a href="#" class="text-white">Cóomo funciona</a></li>
+                      <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
+                      <li><a href="#" class="text-white">FAQ'S</a></li>
+                      <li><a href="#" class="text-white">Carrito</a></li>
+                      <li><a href="#" class="text-white">Crear cuenta</a></li>
+                      <li><a href="#" class="text-white">Iniciar sesión</a></li>
+                  </ul>
+              </div>
+
+              <!-- Empresa Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Empresa</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#" class="text-white">¿Cómo funciona?</a></li>
+                      <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
+                      <li><a href="#" class="text-white">Sistemas de Envíos</a></li>
+                      <li><a href="#" class="text-white">Plastic Neutral</a></li>
+                      <li><a href="#" class="text-white">Productos y servicios</a></li>
+                      <li><a href="#" class="text-white">Menú de la semana</a></li>
+                      <li><a href="#" class="text-white">Comidas para empresa</a></li>
+                      <li><a href="#" class="text-white">Recargar el monedero</a></li>
+                  </ul>
+              </div>
+
+              <!-- Información Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Información</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="#" class="text-white">Preguntas frecuentes</a></li>
+                      <li><a href="#" class="text-white">Política de privacidad</a></li>
+                      <li><a href="#" class="text-white">Términos y condiciones de uso</a></li>
+                      <li><a href="#" class="text-white">Aviso legal</a></li>
+                      <li><a href="#" class="text-white">Envíos</a></li>
+                      <li><a href="#" class="text-white">Devoluciones</a></li>
+                  </ul>
+              </div>
+
+              <!-- Contacto Section -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="text-uppercase">Contacto</h5>
+                  <ul class="list-unstyled mb-0">
+                      <li><a href="../pages/contacto.html" class="text-white">Contacta con nosotros</a></li>
+                      <li><a href="mailto:info@comidita.com" class="text-white">info@comidita.com</a></li>
+                      <li><a href="#" class="text-white">¡Pregúntanos por WhatsApp!</a></li>
+                  </ul>
+                  <div class="mt-3">
+                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Derechos de autor -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Comidita. Todos los derechos reservados.
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
