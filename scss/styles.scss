@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// Variables
+$font-roboto: 'Roboto', sans-serif;
+$font-lobster: 'Lobster', cursive;
+
+$colors: (
+  primary: #3498db,      // Azul claro
+  secondary: #2ecc71,    // Verde
+  background: #f5f5f5,   // Gris claro
+  navbar-bg: #34495e,    // Azul oscuro
+  footer-bg: #2c3e50,    // Azul más oscuro
+  container-bg: #ffffff, // Blanco
+  text: #333,            // Gris oscuro
+  card-background: #ffffff, // Blanco
+  contact-card-background: #ecf0f1, // Gris muy claro
+  contact-card-border: #bdc3c7,     // Gris medio
+  heart: #e74c3c,        // Rojo
+  white: #ffffff,
+  page-bg: #eaeaea       // Gris muy claro para el fondo de la página
+);
+
+$sizes: (
+  btn-social: 50px,
+  heart: 1.5rem,
+  quantity-selector: 60px,
+  card-img-top-height: 300px,
+  construction-padding: 50px,
+  construction-border-radius: 15px,
+  spinner: 3rem
+);
+
+$fonts: (
+  body: (
+    family: $font-roboto,
+    style: normal,
+    weight: 400,
+    scale: 1
+  ),
+  title: (
+    family: $font-lobster,
+    style: normal,
+    weight: 400
+  ),
+  construction: (
+    h1-size: 36px,
+    h1-margin-bottom: 20px,
+    p-size: 18px,
+    p-margin-bottom: 30px
+  )
+);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin font-roboto {
+  font-family: $font-roboto;
+}
+
+@mixin font-lobster {
+  font-family: $font-lobster;
+}
+
+// Estilos generales
+body {
+  background-color: map-get($colors, page-bg);
+  color: map-get($colors, text);
+  font-family: map-get(map-get($fonts, body), family);
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-size: 1rem; // Tamaño de fuente reducido
+  letter-spacing: 0.06rem;
+  line-height: calc(1 + 0.8 / #{map-get(map-get($fonts, body), scale)});
+  font-family: map-get(map-get($fonts, body), family);
+  font-style: map-get(map-get($fonts, body), style);
+  font-weight: map-get(map-get($fonts, body), weight);
+  background-color: map-get($colors, container-bg);
+}
+
+h1 {
+  text-align: center;
+  @include font-lobster;
+  position: relative;
+}
+
+h2 {
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: map-get($colors, text);
+    margin: 0.5em auto;
+  }
+
+  &:after {
+    width: 50%;
+  }
+
+  &:before {
+    width: 30%;
+  }
+}
+
+h2, h5 {
+  text-align: center;
+  @include font-roboto;
+}
+
+p, .card-text, .form-control, .form-select, .form-group label {
+  text-align: justify;
+}
+
+.btn-social {
+  font-size: 1.5em;
+  width: map-get($sizes, btn-social);
+  height: map-get($sizes, btn-social);
+  @include flex-center;
+  border-radius: 50%;
+  background-color: map-get($colors, primary);
+  color: map-get($colors, white);
+}
+
+.card-img-top img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.heart-button {
+  color: map-get($colors, heart);
+  font-size: map-get($sizes, heart);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.quantity-selector {
+  max-width: map-get($sizes, quantity-selector);
+}
+
+.card-img-top {
+  max-height: map-get($sizes, card-img-top-height); // Ajusta esta altura según tus necesidades
+  object-fit: cover; // Asegura que la imagen mantenga sus proporciones
+}
+
+.contact-card {
+  background-color: map-get($colors, contact-card-background);
+  border: 1px solid map-get($colors, contact-card-border);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  @include font-roboto;
+}
+
+.form-select {
+  margin-bottom: 15px;
+}
+
+.card, .mb-3 {
+  background-color: map-get($colors, card-background);
+}
+
+// Navbar
+.navbar {
+  background-color: map-get($colors, navbar-bg) !important;
+  color: map-get($colors, white) !important;
+}
+
+.navbar a {
+  color: map-get($colors, white) !important;
+
+  &:hover {
+    color: map-get($colors, secondary) !important;
+  }
+}
+
+// Dropdown
+.navbar .dropdown-menu {
+  background-color: map-get($colors, navbar-bg) !important;
+  border: none;
+}
+
+.navbar .dropdown-item {
+  color: map-get($colors, white) !important;
+
+  &:hover {
+    background-color: map-get($colors, primary) !important;
+    color: map-get($colors, white) !important;
+  }
+}
+
+// Footer
+footer {
+  background-color: map-get($colors, footer-bg);
+  color: map-get($colors, white);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+// Sección de Restaurantes etc
+.restaurant-card {
+  margin-bottom: 30px;
+  @include font-roboto;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-img-left {
+  width: 40%;
+  overflow: hidden;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  @include font-roboto;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Página de Mendoza, contenedores de página en construcción
+.construction-container {
+  text-align: center;
+  background-color: map-get($colors, white);
+  padding: map-get($sizes, construction-padding);
+  border-radius: map-get($sizes, construction-border-radius);
+  @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  
+  h1 {
+    font-size: map-get(map-get($fonts, construction), h1-size);
+    margin-bottom: map-get(map-get($fonts, construction), h1-margin-bottom);
+    @include font-roboto;
+  }
+
+  p {
+    font-size: map-get(map-get($fonts, construction), p-size);
+    margin-bottom: map-get(map-get($fonts, construction), p-margin-bottom);
+    text-align: center;
+    @include font-roboto;
+  }
+}
+
+.spinner-border {
+  width: map-get($sizes, spinner);
+  height: map-get($sizes, spinner);
+}
