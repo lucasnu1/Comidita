@@ -1,259 +1,289 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Comidita</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="../css/styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/comiditalogo.png" alt="logo_comidita" width="75" height="75">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./inicio.html">¿Quiénes somos?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./postres.html">Postres</a>
-                    </li>
-                    <li class="nav-item dropdown"> 
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Restaurantes
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./restaurantesbs.html">Buenos Aires</a></li>
-                            <li><a class="dropdown-item" href="./restaurantescba.html">Córdoba</a></li>
-                            <li><a class="dropdown-item" href="./restaurantesmdz.html">Mendoza</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="./restaurantesmdz.html">Otras partes del mundo</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <form class="d-flex me-2" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-                </form>
-                <a href="#" class="btn btn-outline-primary me-2" aria-label="Carrito de Compras">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
-                <a href="#" class="btn btn-outline-secondary" aria-label="Iniciar Sesión">
-                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
-                </a>
-            </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurantes en Córdoba - Comidita</title>
+  <meta name="description" content="Conoce los mejores restaurantes en Córdoba recomendados por Comidita. Disfruta de las mejores experiencias culinarias.">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/comiditalogo.png" alt="logo_comidita" width="75" height="75">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./inicio.html">¿Quiénes somos?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./postres.html">Postres</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Restaurantes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./restaurantesbs.html">Buenos Aires</a></li>
+                <li><a class="dropdown-item" href="./restaurantescba.html">Córdoba</a></li>
+                <li><a class="dropdown-item" href="./restaurantesmdz.html">Mendoza</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./restaurantesmdz.html">Otras partes del mundo</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex me-2" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+          <a href="#" class="btn btn-outline-primary me-2" aria-label="Carrito de Compras">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <a href="#" class="btn btn-outline-secondary" aria-label="Iniciar Sesión">
+            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+          </a>
         </div>
+      </div>
     </nav>
-    </header>
-    <main>
-      <div class="container mt-5">
-        <h2>Córdoba</h2>
-        <div class="row">
-          <!-- Primer Restaurante -->
-          <div class="col-md-4">
-            <div class="card restaurant-card">
-              <div id="carouselRestaurant1" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../assets/restaurante4.jpeg" class="d-block w-100" alt="La_cocina_de_Fazzio1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/restaurante42.jpeg" class="d-block w-100" alt="La_cocina_de_Fazzio2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/restaurante43.jpeg" class="d-block w-100" alt="La_cocina_de_Fazzio3">
-                  </div>
+  </header>
+  <main>
+    <div class="container mt-5">
+      <h2>Córdoba</h2>
+      <div class="row">
+        <!-- Primer Restaurante -->
+        <div class="col-md-4">
+          <div class="card restaurant-card">
+            <div id="carouselRestaurant1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/restaurante4.jpeg" class="d-block w-100" alt="La_cocina_de_Fazzio1">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurant1" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselRestaurant1" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item">
+                  <img src="../assets/restaurante42.jpeg" class="d-block w-100" alt="La_cocina_de_Fazzio2">
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/restaurante43.jpeg" class="d-block w-100" alt="La_cocina_de_Fazzio3">
+                </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">La cocina de Fazzio</h5>
-                <p class="card-text">Los pasillos del Mercado Norte se reservan un lugar para un restaurante que comenzó “de a bocaditos” y que hoy es una referencia indudable para los amantes de los pescados y mariscos: La Cocina de Fazzio.</p>
-                <p class="card-text"><small class="text-muted">Ubicación: 📍Oncativo 50, Córdoba, Argentina 5000 </small></p>
-                <p class="card-text"><small class="text-muted">Horario: Horario de atención</small></p>
-                <div class="action-buttons">
-                  <a href="tel:+1234567890" class="btn btn-secondary"><i class="fas fa-phone"></i></a>
-                  <a href="https://www.instagram.com/lacocinadefazzio/?hl=es" class="btn btn-secondary"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="btn btn-primary">Reservar</a>
-                </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurant1"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselRestaurant1"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">La cocina de Fazzio</h5>
+              <p class="card-text">Los pasillos del Mercado Norte se reservan un lugar para un restaurante que comenzó
+                “de a bocaditos” y que hoy es una referencia indudable para los amantes de los pescados y mariscos: La
+                Cocina de Fazzio.</p>
+              <p class="card-text"><small class="text-muted">Ubicación: 📍Oncativo 50, Córdoba, Argentina 5000 </small>
+              </p>
+              <p class="card-text"><small class="text-muted">Horario: Horario de atención</small></p>
+              <div class="action-buttons">
+                <a href="tel:+1234567890" class="btn btn-secondary"><i class="fas fa-phone"></i></a>
+                <a href="https://www.instagram.com/lacocinadefazzio/?hl=es" class="btn btn-secondary"><i
+                    class="fab fa-instagram"></i></a>
+                <a href="#" class="btn btn-primary">Reservar</a>
               </div>
             </div>
           </div>
-          <!-- Segundo Restaurante -->
-          <div class="col-md-4">
-            <div class="card restaurant-card">
-              <div id="carouselRestaurant2" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../assets/restaurante5.jpeg" class="d-block w-100" alt="anchoita_foto1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/restaurante52.jpeg" class="d-block w-100" alt="anchoita_foto2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/restaurante53.jpeg" class="d-block w-100" alt="anchoita_foto3">
-                  </div>
+        </div>
+        <!-- Segundo Restaurante -->
+        <div class="col-md-4">
+          <div class="card restaurant-card">
+            <div id="carouselRestaurant2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/restaurante5.jpeg" class="d-block w-100" alt="anchoita_foto1">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurant2" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselRestaurant2" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item">
+                  <img src="../assets/restaurante52.jpeg" class="d-block w-100" alt="anchoita_foto2">
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/restaurante53.jpeg" class="d-block w-100" alt="anchoita_foto3">
+                </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">El Papagayo</h5>
-                <p class="card-text">El Papagayo y su menú de pasos, ocupan un lugar en la lista de los 25 mejores restó de Sudamérica, prometiendo una experiencia inolvidable para los amantes de la comida gourmet, el diseño, el arte y la cocina creativa. Un verdadero imperdible en el centro de la ciudad.</p>
-                <p class="card-text"><small class="text-muted">Ubicación:📍Arturo M. Bas 69</small></p>
-                <p class="card-text"><small class="text-muted">Horario: Horario de atención</small></p>
-                <div class="action-buttons">
-                  <a href="tel:+1234567890" class="btn btn-secondary"><i class="fas fa-phone"></i></a>
-                  <a href="https://www.instagram.com/elpapagayo69/?hl=es" class="btn btn-secondary"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="btn btn-primary">Reservar</a>
-                </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurant2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselRestaurant2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">El Papagayo</h5>
+              <p class="card-text">El Papagayo y su menú de pasos, ocupan un lugar en la lista de los 25 mejores restó
+                de Sudamérica, prometiendo una experiencia inolvidable para los amantes de la comida gourmet, el diseño,
+                el arte y la cocina creativa. Un verdadero imperdible en el centro de la ciudad.</p>
+              <p class="card-text"><small class="text-muted">Ubicación:📍Arturo M. Bas 69</small></p>
+              <p class="card-text"><small class="text-muted">Horario: Horario de atención</small></p>
+              <div class="action-buttons">
+                <a href="tel:+1234567890" class="btn btn-secondary"><i class="fas fa-phone"></i></a>
+                <a href="https://www.instagram.com/elpapagayo69/?hl=es" class="btn btn-secondary"><i
+                    class="fab fa-instagram"></i></a>
+                <a href="#" class="btn btn-primary">Reservar</a>
               </div>
             </div>
           </div>
-          <!-- Tercer Restaurante -->
-          <div class="col-md-4">
-            <div class="card restaurant-card">
-              <div id="carouselRestaurant3" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../assets/restaurante3.jpg" class="d-block w-100" alt="anafe_foto1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/restaurante32.jpg" class="d-block w-100" alt="anafe_foto2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../assets/restaurante33.jpg" class="d-block w-100" alt="anafe_foto3">
-                  </div>
+        </div>
+        <!-- Tercer Restaurante -->
+        <div class="col-md-4">
+          <div class="card restaurant-card">
+            <div id="carouselRestaurant3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/restaurante3.jpg" class="d-block w-100" alt="anafe_foto1">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurant3" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselRestaurant3" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item">
+                  <img src="../assets/restaurante32.jpg" class="d-block w-100" alt="anafe_foto2">
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/restaurante33.jpg" class="d-block w-100" alt="anafe_foto3">
+                </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">El Celta</h5>
-                <p class="card-text">En el tradicional barrio de Alta Córdoba, justo frente a su estación de trenes, tiene su sede el emblemático restaurante “El Celta”. Un punto de la ciudad que podría ser catalogado como la puerta de entrada a verdadero un océano de sabores. </p>
-                <p class="card-text"><small class="text-muted">Ubicación:📍Jerónimo Luis de Cabrera 269</small></p>
-                <p class="card-text"><small class="text-muted">Horario: Horario de atención</small></p>
-                <div class="action-buttons">
-                  <a href="tel:+1234567890" class="btn btn-secondary"><i class="fas fa-phone"></i></a>
-                  <a href="https://www.instagram.com/elceltarestaurant/?hl=e" class="btn btn-secondary"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="btn btn-primary">Reservar</a>
-                </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurant3"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselRestaurant3"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">El Celta</h5>
+              <p class="card-text">En el tradicional barrio de Alta Córdoba, justo frente a su estación de trenes, tiene
+                su sede el emblemático restaurante “El Celta”. Un punto de la ciudad que podría ser catalogado como la
+                puerta de entrada a verdadero un océano de sabores. </p>
+              <p class="card-text"><small class="text-muted">Ubicación:📍Jerónimo Luis de Cabrera 269</small></p>
+              <p class="card-text"><small class="text-muted">Horario: Horario de atención</small></p>
+              <div class="action-buttons">
+                <a href="tel:+1234567890" class="btn btn-secondary"><i class="fas fa-phone"></i></a>
+                <a href="https://www.instagram.com/elceltarestaurant/?hl=e" class="btn btn-secondary"><i
+                    class="fab fa-instagram"></i></a>
+                <a href="#" class="btn btn-primary">Reservar</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-    </main>
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center text-lg-start mt-5">
-      <div class="container p-4">
-          <div class="row">
-              <!--Comidita Section -->
-              <div class="col-lg-3 col-md-6 mb-4">
-                  <h5 class="text-uppercase">Comidita</h5>
-                  <ul class="list-unstyled mb-0">
-                      <li><a href="#" class="text-white">Menu de la semana</a></li>
-                      <li><a href="#" class="text-white">Cóomo funciona</a></li>
-                      <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
-                      <li><a href="#" class="text-white">FAQ'S</a></li>
-                      <li><a href="#" class="text-white">Carrito</a></li>
-                      <li><a href="#" class="text-white">Crear cuenta</a></li>
-                      <li><a href="#" class="text-white">Iniciar sesión</a></li>
-                  </ul>
-              </div>
-
-              <!-- Empresa Section -->
-              <div class="col-lg-3 col-md-6 mb-4">
-                  <h5 class="text-uppercase">Empresa</h5>
-                  <ul class="list-unstyled mb-0">
-                      <li><a href="#" class="text-white">¿Cómo funciona?</a></li>
-                      <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
-                      <li><a href="#" class="text-white">Sistemas de Envíos</a></li>
-                      <li><a href="#" class="text-white">Plastic Neutral</a></li>
-                      <li><a href="#" class="text-white">Productos y servicios</a></li>
-                      <li><a href="#" class="text-white">Menú de la semana</a></li>
-                      <li><a href="#" class="text-white">Comidas para empresa</a></li>
-                      <li><a href="#" class="text-white">Recargar el monedero</a></li>
-                  </ul>
-              </div>
-
-              <!-- Información Section -->
-              <div class="col-lg-3 col-md-6 mb-4">
-                  <h5 class="text-uppercase">Información</h5>
-                  <ul class="list-unstyled mb-0">
-                      <li><a href="#" class="text-white">Preguntas frecuentes</a></li>
-                      <li><a href="#" class="text-white">Política de privacidad</a></li>
-                      <li><a href="#" class="text-white">Términos y condiciones de uso</a></li>
-                      <li><a href="#" class="text-white">Aviso legal</a></li>
-                      <li><a href="#" class="text-white">Envíos</a></li>
-                      <li><a href="#" class="text-white">Devoluciones</a></li>
-                  </ul>
-              </div>
-
-              <!-- Contacto Section -->
-              <div class="col-lg-3 col-md-6 mb-4">
-                  <h5 class="text-uppercase">Contacto</h5>
-                  <ul class="list-unstyled mb-0">
-                      <li><a href="../pages/contacto.html" class="text-white">Contacta con nosotros</a></li>
-                      <li><a href="mailto:info@comidita.com" class="text-white">info@comidita.com</a></li>
-                      <li><a href="#" class="text-white">¡Pregúntanos por WhatsApp!</a></li>
-                  </ul>
-                  <div class="mt-3">
-                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-              </div>
-          </div>
-      </div>
-
-      <!-- Derechos de autor -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 Comidita. Todos los derechos reservados.
     </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+
+  </main>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center text-lg-start mt-5">
+    <div class="container p-4">
+      <div class="row">
+        <!--Comidita Section -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Comidita</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#" class="text-white">Menu de la semana</a></li>
+            <li><a href="#" class="text-white">Cóomo funciona</a></li>
+            <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
+            <li><a href="#" class="text-white">FAQ'S</a></li>
+            <li><a href="#" class="text-white">Carrito</a></li>
+            <li><a href="#" class="text-white">Crear cuenta</a></li>
+            <li><a href="#" class="text-white">Iniciar sesión</a></li>
+          </ul>
+        </div>
+
+        <!-- Empresa Section -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Empresa</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#" class="text-white">¿Cómo funciona?</a></li>
+            <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
+            <li><a href="#" class="text-white">Sistemas de Envíos</a></li>
+            <li><a href="#" class="text-white">Plastic Neutral</a></li>
+            <li><a href="#" class="text-white">Productos y servicios</a></li>
+            <li><a href="#" class="text-white">Menú de la semana</a></li>
+            <li><a href="#" class="text-white">Comidas para empresa</a></li>
+            <li><a href="#" class="text-white">Recargar el monedero</a></li>
+          </ul>
+        </div>
+
+        <!-- Información Section -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Información</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#" class="text-white">Preguntas frecuentes</a></li>
+            <li><a href="#" class="text-white">Política de privacidad</a></li>
+            <li><a href="#" class="text-white">Términos y condiciones de uso</a></li>
+            <li><a href="#" class="text-white">Aviso legal</a></li>
+            <li><a href="#" class="text-white">Envíos</a></li>
+            <li><a href="#" class="text-white">Devoluciones</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto Section -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase">Contacto</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="../pages/contacto.html" class="text-white">Contacta con nosotros</a></li>
+            <li><a href="mailto:info@comidita.com" class="text-white">info@comidita.com</a></li>
+            <li><a href="#" class="text-white">¡Pregúntanos por WhatsApp!</a></li>
+          </ul>
+          <div class="mt-3">
+            <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-light btn-social m-1" role="button" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Derechos de autor -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Comidita. Todos los derechos reservados.
+    </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
