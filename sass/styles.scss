@@ -6,19 +6,19 @@ $font-roboto: 'Roboto', sans-serif;
 $font-lobster: 'Lobster', cursive;
 
 $colors: (
-  primary: #3498db,      // Azul claro
-  secondary: #2ecc71,    // Verde
-  background: #f5f5f5,   // Gris claro
-  navbar-bg: #34495e,    // Azul oscuro
-  footer-bg: #2c3e50,    // Azul más oscuro
-  container-bg: #ffffff, // Blanco
-  text: #333,            // Gris oscuro
-  card-background: #ffffff, // Blanco
-  contact-card-background: #ecf0f1, // Gris muy claro
-  contact-card-border: #000000,     // Gris medio
-  heart: #e74c3c,        // Rojo
+  primary: #3498db,
+  secondary: #2ecc71,
+  background: #f5f5f5,
+  navbar-bg: #34495e,
+  footer-bg: #2c3e50,
+  container-bg: #ffffff,
+  text: #333,
+  card-background: #ffffff,
+  contact-card-background: #ecf0f1,
+  contact-card-border: #000000,
+  heart: #e74c3c,
   white: #ffffff,
-  page-bg: #F2E2C4    // Gris muy claro para el fondo de la página
+  page-bg: #f2e2c4 // Se actualizo el color 
 );
 
 $sizes: (
@@ -70,6 +70,18 @@ $fonts: (
   font-family: $font-lobster;
 }
 
+// Animación en los Cards
+@keyframes hoverEffect {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+}
+
 // Estilos generales
 body {
   background-color: map-get($colors, page-bg);
@@ -84,13 +96,13 @@ main {
   grid-template-columns: 100%;
   min-height: 100%;
   margin: 0;
-  font-size: 1rem; // Tamaño de fuente reducido
+  font-size: 1rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / #{map-get(map-get($fonts, body), scale)});
   font-family: map-get(map-get($fonts, body), family);
   font-style: map-get(map-get($fonts, body), style);
   font-weight: map-get(map-get($fonts, body), weight);
-  background-color: map-get($colors, container-bg);
+  background-color: map-get($colors, page-bg);
 }
 
 h1 {
@@ -118,12 +130,17 @@ h2 {
   }
 }
 
-h2, h5 {
+h2,
+h5 {
   text-align: center;
   @include font-roboto;
 }
 
-p, .card-text, .form-control, .form-select, .form-group label {
+p,
+.card-text,
+.form-control,
+.form-select,
+.form-group label {
   text-align: justify;
 }
 
@@ -155,12 +172,12 @@ p, .card-text, .form-control, .form-select, .form-group label {
 }
 
 .card-img-top {
-  max-height: map-get($sizes, card-img-top-height); // Ajusta esta altura según tus necesidades
-  object-fit: cover; // Asegura que la imagen mantenga sus proporciones
+  max-height: map-get($sizes, card-img-top-height);
+  object-fit: cover;
 }
 
 .contact-card {
-  background-color: map-get($colors, contact-card-background);
+  background-color: map-get($colors, page-bg);
   border: 1px solid map-get($colors, contact-card-border);
   border-radius: 15px;
   padding: 15px;
@@ -173,8 +190,14 @@ p, .card-text, .form-control, .form-select, .form-group label {
   margin-bottom: 15px;
 }
 
-.card, .mb-3 {
+.card,
+.mb-3 {
   background-color: map-get($colors, card-background);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    animation: hoverEffect 0.3s forwards;
+  }
 }
 
 // Navbar
@@ -214,7 +237,7 @@ footer {
   text-align: center;
 }
 
-// Sección de Restaurantes etc
+// Sección de Restaurantes, etc.
 .restaurant-card {
   margin-bottom: 30px;
   @include font-roboto;
@@ -248,7 +271,7 @@ footer {
   padding: map-get($sizes, construction-padding);
   border-radius: map-get($sizes, construction-border-radius);
   @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-  
+
   h1 {
     font-size: map-get(map-get($fonts, construction), h1-size);
     margin-bottom: map-get(map-get($fonts, construction), h1-margin-bottom);
@@ -266,4 +289,109 @@ footer {
 .spinner-border {
   width: map-get($sizes, spinner);
   height: map-get($sizes, spinner);
+}
+
+// Estilos específicos para la sección de contacto
+#contacto {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h2 {
+    font-family: map-get(map-get($fonts, title), family);
+    color: map-get($colors, primary);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .contact-card {
+    @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    background-color: map-get($colors, contact-card-background);
+    border: 1px solid map-get($colors, contact-card-border);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    h5 {
+      font-family: map-get(map-get($fonts, title), family);
+      color: map-get($colors, primary);
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: map-get($colors, text);
+
+      &:hover {
+        color: map-get($colors, primary);
+      }
+    }
+
+    .fab {
+      margin-right: 10px;
+      color: map-get($colors, primary);
+
+      &:hover {
+        color: map-get($colors, secondary);
+      }
+    }
+  }
+
+  form {
+    margin-top: 20px;
+
+    .form-label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      border: 1px solid map-get($colors, text);
+    }
+
+    .btn-primary {
+      background-color: map-get($colors, primary);
+      border: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: map-get($colors, page-bg);
+      }
+    }
+  }
+}
+// Navbar
+.navbar {
+  background-color: map-get($colors, navbar-bg) !important;
+  color: map-get($colors, white) !important;
+}
+
+.navbar .nav-item a {
+  color: map-get($colors, white) !important;
+
+  &:hover {
+    color: #f2e2c4 !important;
+  }
+}
+
+// Dropdown
+.navbar .dropdown-menu {
+  background-color: map-get($colors, navbar-bg) !important;
+  border: none;
+}
+
+.navbar .dropdown-item {
+  color: map-get($colors, white) !important;
+
+  &:hover {
+    background-color: map-get($colors, primary) !important;
+    color: map-get($colors, white) !important;
+  }
 }

@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@keyframes hoverEffect {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+}
 body {
-  background-color: #eaeaea;
+  background-color: #f2e2c4;
   color: #333;
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -19,7 +29,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: #ffffff;
+  background-color: #f2e2c4;
 }
 
 h1 {
@@ -42,12 +52,17 @@ h2:before {
   width: 30%;
 }
 
-h2, h5 {
+h2,
+h5 {
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
 
-p, .card-text, .form-control, .form-select, .form-group label {
+p,
+.card-text,
+.form-control,
+.form-select,
+.form-group label {
   text-align: justify;
 }
 
@@ -86,8 +101,8 @@ p, .card-text, .form-control, .form-select, .form-group label {
 }
 
 .contact-card {
-  background-color: #ecf0f1;
-  border: 1px solid #bdc3c7;
+  background-color: #f2e2c4;
+  border: 1px solid #000000;
   border-radius: 15px;
   padding: 15px;
   margin-bottom: 15px;
@@ -99,8 +114,14 @@ p, .card-text, .form-control, .form-select, .form-group label {
   margin-bottom: 15px;
 }
 
-.card, .mb-3 {
+.card,
+.mb-3 {
   background-color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover,
+.mb-3:hover {
+  animation: hoverEffect 0.3s forwards;
 }
 
 .navbar {
@@ -183,6 +204,91 @@ footer {
 .spinner-border {
   width: 3rem;
   height: 3rem;
+}
+
+#contacto .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#contacto h2 {
+  font-family: "Lobster", cursive;
+  color: #3498db;
+}
+#contacto .text-center {
+  text-align: center;
+}
+#contacto .contact-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ecf0f1;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+#contacto .contact-card h5 {
+  font-family: "Lobster", cursive;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+#contacto .contact-card p {
+  margin-bottom: 5px;
+}
+#contacto .contact-card a {
+  color: #333;
+}
+#contacto .contact-card a:hover {
+  color: #3498db;
+}
+#contacto .contact-card .fab {
+  margin-right: 10px;
+  color: #3498db;
+}
+#contacto .contact-card .fab:hover {
+  color: #2ecc71;
+}
+#contacto form {
+  margin-top: 20px;
+}
+#contacto form .form-label {
+  font-weight: bold;
+}
+#contacto form .form-control {
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+#contacto form .btn-primary {
+  background-color: #3498db;
+  border: none;
+  transition: background-color 0.3s;
+}
+#contacto form .btn-primary:hover {
+  background-color: #f2e2c4;
+}
+
+.navbar {
+  background-color: #34495e !important;
+  color: #ffffff !important;
+}
+
+.navbar .nav-item a {
+  color: #ffffff !important;
+}
+.navbar .nav-item a:hover {
+  color: #f2e2c4 !important;
+}
+
+.navbar .dropdown-menu {
+  background-color: #34495e !important;
+  border: none;
+}
+
+.navbar .dropdown-item {
+  color: #ffffff !important;
+}
+.navbar .dropdown-item:hover {
+  background-color: #3498db !important;
+  color: #ffffff !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
