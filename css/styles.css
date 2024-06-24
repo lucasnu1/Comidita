@@ -27,9 +27,6 @@ main {
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / 1);
   font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  background-color: #f2e2c4;
 }
 
 h1 {
@@ -38,6 +35,10 @@ h1 {
   position: relative;
 }
 
+h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
 h2:after, h2:before {
   content: "";
   display: block;
@@ -52,7 +53,6 @@ h2:before {
   width: 30%;
 }
 
-h2,
 h5 {
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -128,23 +128,35 @@ p,
   background-color: #34495e !important;
   color: #ffffff !important;
 }
-
-.navbar a {
+.navbar .nav-item a,
+.navbar .btn-outline-primary,
+.navbar .fas {
   color: #ffffff !important;
+  transition: color 0.3s;
 }
-.navbar a:hover {
-  color: #2ecc71 !important;
+.navbar .nav-item a:hover,
+.navbar .btn-outline-primary:hover,
+.navbar .fas:hover {
+  color: #f2e2c4 !important;
 }
-
+.navbar .btn-outline-primary {
+  border-color: #ffffff !important;
+}
+.navbar .btn-outline-primary:hover {
+  background-color: transparent !important;
+  border-color: #f2e2c4 !important;
+}
+.navbar .fas {
+  margin-right: 10px;
+}
 .navbar .dropdown-menu {
   background-color: #34495e !important;
   border: none;
 }
-
-.navbar .dropdown-item {
+.navbar .dropdown-menu .dropdown-item {
   color: #ffffff !important;
 }
-.navbar .dropdown-item:hover {
+.navbar .dropdown-menu .dropdown-item:hover {
   background-color: #3498db !important;
   color: #ffffff !important;
 }
@@ -189,16 +201,17 @@ footer {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.construction-container h1, .construction-container p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
 .construction-container h1 {
   font-size: 36px;
   margin-bottom: 20px;
-  font-family: "Roboto", sans-serif;
 }
 .construction-container p {
   font-size: 18px;
   margin-bottom: 30px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
 }
 
 .spinner-border {
@@ -255,40 +268,15 @@ footer {
 }
 #contacto form .form-control {
   border-radius: 10px;
-  border: 1px solid #333;
+  border: 1px solid #333 !important;
 }
 #contacto form .btn-primary {
-  background-color: #3498db;
+  background-color: #3498db !important;
   border: none;
   transition: background-color 0.3s;
 }
 #contacto form .btn-primary:hover {
-  background-color: #f2e2c4;
-}
-
-.navbar {
-  background-color: #34495e !important;
-  color: #ffffff !important;
-}
-
-.navbar .nav-item a {
-  color: #ffffff !important;
-}
-.navbar .nav-item a:hover {
-  color: #f2e2c4 !important;
-}
-
-.navbar .dropdown-menu {
-  background-color: #34495e !important;
-  border: none;
-}
-
-.navbar .dropdown-item {
-  color: #ffffff !important;
-}
-.navbar .dropdown-item:hover {
-  background-color: #3498db !important;
-  color: #ffffff !important;
+  background-color: #f2e2c4 !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

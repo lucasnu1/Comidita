@@ -62,12 +62,16 @@ $fonts: (
   box-shadow: $shadow;
 }
 
+@mixin font-family($font) {
+  font-family: $font;
+}
+
 @mixin font-roboto {
-  font-family: $font-roboto;
+  @include font-family($font-roboto);
 }
 
 @mixin font-lobster {
-  font-family: $font-lobster;
+  @include font-family($font-lobster);
 }
 
 // Animación en los Cards
@@ -86,7 +90,7 @@ $fonts: (
 body {
   background-color: map-get($colors, page-bg);
   color: map-get($colors, text);
-  font-family: map-get(map-get($fonts, body), family);
+  @include font-roboto;
   margin: 0;
 }
 
@@ -99,10 +103,7 @@ main {
   font-size: 1rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / #{map-get(map-get($fonts, body), scale)});
-  font-family: map-get(map-get($fonts, body), family);
-  font-style: map-get(map-get($fonts, body), style);
-  font-weight: map-get(map-get($fonts, body), weight);
-  background-color: map-get($colors, page-bg);
+  @include font-roboto;
 }
 
 h1 {
@@ -112,6 +113,9 @@ h1 {
 }
 
 h2 {
+  text-align: center;
+  @include font-roboto;
+  
   &:after,
   &:before {
     content: '';
@@ -130,7 +134,6 @@ h2 {
   }
 }
 
-h2,
 h5 {
   text-align: center;
   @include font-roboto;
@@ -204,28 +207,43 @@ p,
 .navbar {
   background-color: map-get($colors, navbar-bg) !important;
   color: map-get($colors, white) !important;
-}
 
-.navbar a {
-  color: map-get($colors, white) !important;
-
-  &:hover {
-    color: map-get($colors, secondary) !important;
-  }
-}
-
-// Dropdown
-.navbar .dropdown-menu {
-  background-color: map-get($colors, navbar-bg) !important;
-  border: none;
-}
-
-.navbar .dropdown-item {
-  color: map-get($colors, white) !important;
-
-  &:hover {
-    background-color: map-get($colors, primary) !important;
+  .nav-item a,
+  .btn-outline-primary,
+  .fas {
     color: map-get($colors, white) !important;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #f2e2c4 !important;
+    }
+  }
+
+  .btn-outline-primary {
+    border-color: map-get($colors, white) !important;
+
+    &:hover {
+      background-color: transparent !important;
+      border-color: #f2e2c4 !important;
+    }
+  }
+
+  .fas {
+    margin-right: 10px;
+  }
+
+  .dropdown-menu {
+    background-color: map-get($colors, navbar-bg) !important;
+    border: none;
+
+    .dropdown-item {
+      color: map-get($colors, white) !important;
+
+      &:hover {
+        background-color: map-get($colors, primary) !important;
+        color: map-get($colors, white) !important;
+      }
+    }
   }
 }
 
@@ -272,17 +290,19 @@ footer {
   border-radius: map-get($sizes, construction-border-radius);
   @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 
+  h1, p {
+    text-align: center;
+    @include font-roboto;
+  }
+
   h1 {
     font-size: map-get(map-get($fonts, construction), h1-size);
     margin-bottom: map-get(map-get($fonts, construction), h1-margin-bottom);
-    @include font-roboto;
   }
 
   p {
     font-size: map-get(map-get($fonts, construction), p-size);
     margin-bottom: map-get(map-get($fonts, construction), p-margin-bottom);
-    text-align: center;
-    @include font-roboto;
   }
 }
 
@@ -300,7 +320,7 @@ footer {
   }
 
   h2 {
-    font-family: map-get(map-get($fonts, title), family);
+    @include font-family(map-get(map-get($fonts, title), family));
     color: map-get($colors, primary);
   }
 
@@ -317,7 +337,7 @@ footer {
     margin-bottom: 20px;
 
     h5 {
-      font-family: map-get(map-get($fonts, title), family);
+      @include font-family(map-get(map-get($fonts, title), family));
       color: map-get($colors, primary);
       margin-bottom: 10px;
     }
@@ -353,45 +373,17 @@ footer {
 
     .form-control {
       border-radius: 10px;
-      border: 1px solid map-get($colors, text);
+      border: 1px solid map-get($colors, text) !important;
     }
 
     .btn-primary {
-      background-color: map-get($colors, primary);
+      background-color: map-get($colors, primary) !important;
       border: none;
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: map-get($colors, page-bg);
+        background-color: map-get($colors, page-bg) !important;
       }
     }
-  }
-}
-// Navbar
-.navbar {
-  background-color: map-get($colors, navbar-bg) !important;
-  color: map-get($colors, white) !important;
-}
-
-.navbar .nav-item a {
-  color: map-get($colors, white) !important;
-
-  &:hover {
-    color: #f2e2c4 !important;
-  }
-}
-
-// Dropdown
-.navbar .dropdown-menu {
-  background-color: map-get($colors, navbar-bg) !important;
-  border: none;
-}
-
-.navbar .dropdown-item {
-  color: map-get($colors, white) !important;
-
-  &:hover {
-    background-color: map-get($colors, primary) !important;
-    color: map-get($colors, white) !important;
   }
 }
