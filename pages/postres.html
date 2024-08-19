@@ -59,7 +59,7 @@
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                         <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
                     </form>
-                    <a href="#" class="btn btn-outline-primary me-2" aria-label="Carrito de Compras">
+                    <a href="../carrito.html" class="btn btn-outline-primary me-2" aria-label="Carrito de Compras">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                     <a href="#" class="btn btn-outline-secondary" aria-label="Iniciar Sesión">
@@ -74,7 +74,7 @@
             <h2>Postres Frescos</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column" data-id="10">
                         <img src="../assets/postre1.jpg" class="card-img-top" alt="yogurt_de_avellanas_y_vainilla">
                         <div class="card-body">
                             <h5 class="card-title">Flan frutal</h5>
@@ -88,7 +88,7 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
-                                <option value="4">4</option>
+                                <option value="4">4</option>q
                                 <option value="5">5</option>
                             </select>
                             <button class="btn btn-outline-primary" type="button">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column" data-id="11">
                         <img src="../assets/postre2.jpg" class="card-img-top" alt="Yogourt_dorado">
                         <div class="card-body">
                             <h5 class="card-title">Yogourt dorado a la curcuma</h5>
@@ -131,7 +131,7 @@
             <h2>Nuestros mas elegidos</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column" data-id="12">
                         <img src="../assets/postre3.jpg" class="card-img-top" alt="carpaccio_de_piña_con_yogur">
                         <div class="card-body">
                             <h5 class="card-title">Carpaccio de piña con yogur</h5>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column" data-id="13">
                         <img src="../assets/postre4.jpg" class="card-img-top" alt="brownie_con_frutas">
                         <div class="card-body">
                             <h5 class="card-title">Brownie con frutas</h5>
@@ -190,7 +190,7 @@
             <h2>Postres Frios</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column" data-id="14">
                         <img src="../assets/postre5.jpg" class="card-img-top" alt="flan_de_manzana">
                         <div class="card-body">
                             <h5 class="card-title">Flan de manzana</h5>
@@ -217,7 +217,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column" data-id="15">
                         <img src="../assets/postre6.jpg" class="card-img-top" alt="cheesecake_de_arandanos">
                         <div class="card-body">
                             <h5 class="card-title">Cheesecake de arandanos</h5>
@@ -247,7 +247,7 @@
             <h2>Para tomar el mate</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column"data-id="16">
                         <img src="../assets/postre7.jpg" class="card-img-top" alt="macarons_de_crema_con_queso">
                         <div class="card-body">
                             <h5 class="card-title">Macarons de crema con queso</h5>
@@ -275,7 +275,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 d-flex flex-column">
+                    <div class="card h-100 d-flex flex-column"data-id="17">
                         <img src="../assets/postre4.jpg" class="card-img-top" alt="mini_polos_de_fruta">
                         <div class="card-body">
                             <h5 class="card-title">Mini polos de fruta</h5>
@@ -304,6 +304,7 @@
             </div>
         </div>
     </main>
+
     <!-- Footer -->
     <footer class="bg-dark text-center text-lg-start mt-5">
         <div class="container p-4">
@@ -351,6 +352,11 @@
             © 2023 Comidita. Todos los derechos reservados.
         </div>
     </footer>
+    <div id="alerta-carrito" class="alert alert-success alert-dismissible fade" role="alert">
+        <strong>¡Agregado!</strong> El artículo ha sido añadido al carrito.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7ie4Ln4e5/BBuEG8oFAZXksEhtT53X2h6p9"
@@ -363,6 +369,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="../carrito.js"></script>
 </body>
 
 </html>

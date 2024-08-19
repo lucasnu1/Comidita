@@ -18,7 +18,9 @@ $colors: (
   contact-card-border: #000000,
   heart: #e74c3c,
   white: #ffffff,
-  page-bg: #f2e2c4 // Se actualizo el color 
+  page-bg: #f2e2c4, // Se actualizo el color 
+  alerta-bg: #28a745,
+  alerta-shadow: rgba(0, 0, 0, 0.1)
 );
 
 $sizes: (
@@ -28,7 +30,10 @@ $sizes: (
   card-img-top-height: 300px,
   construction-padding: 50px,
   construction-border-radius: 15px,
-  spinner: 3rem
+  spinner: 3rem,
+  alerta-padding: 16px,
+  alerta-radius: 8px,
+  alerta-close-size: 16px
 );
 
 $fonts: (
@@ -384,6 +389,138 @@ footer {
       &:hover {
         background-color: map-get($colors, page-bg) !important;
       }
+    }
+  }
+}
+
+// Estilos para la ventana emergente de notificación
+.alerta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: map-get($colors, alerta-bg);
+  color: map-get($colors, white);
+  padding: map-get($sizes, alerta-padding);
+  border-radius: map-get($sizes, alerta-radius);
+  box-shadow: 0 4px 8px map-get($colors, alerta-shadow);
+  font-size: 1rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: map-get($colors, white);
+    font-size: map-get($sizes, alerta-close-size);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+
+    &:hover {
+      color: map-get($colors, text);
+    }
+  }
+}
+
+// Estilos para la página del carrito
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: map-get($colors, container-bg);
+  border-radius: 15px;
+  @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  @include font-roboto;
+}
+
+.cart-header {
+  text-align: center;
+  margin-bottom: 20px;
+
+  h2 {
+    @include font-lobster;
+    color: map-get($colors, primary);
+  }
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid map-get($colors, text);
+  margin-bottom: 10px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .item-details {
+    flex: 1;
+    margin-left: 20px;
+
+    h5 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: map-get($colors, text);
+    }
+
+    p {
+      margin: 5px 0 0;
+      color: map-get($colors, secondary);
+    }
+  }
+
+  .item-actions {
+    display: flex;
+    align-items: center;
+
+    .quantity-selector {
+      margin-right: 20px;
+    }
+
+    .remove-btn {
+      background-color: map-get($colors, heart);
+      color: map-get($colors, white);
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken(map-get($colors, heart), 10%);
+      }
+    }
+  }
+}
+
+.cart-footer {
+  text-align: right;
+  margin-top: 20px;
+
+  .total-price {
+    font-size: 1.5rem;
+    color: map-get($colors, primary);
+    margin-bottom: 10px;
+  }
+
+  .checkout-btn {
+    background-color: map-get($colors, primary);
+    color: map-get($colors, white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(map-get($colors, primary), 10%);
     }
   }
 }
