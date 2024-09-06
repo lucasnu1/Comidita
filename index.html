@@ -73,6 +73,9 @@
     <!-- main -->
     <!--main-->
     <main>
+        <div class="text-center mt-4">
+            <button class="btn btn-success" onclick="mostrarAlertaJSON()">Ver Comidas Destacadas</button>
+        </div>
         <div class="container mt-5">
             <h2 data-aos="fade-up">Desayunos</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -249,7 +252,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container mt-5">
             <h2 data-aos="fade-up">Cena</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -402,11 +404,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="./carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JSON datos-->
+    <script>
+        const postresDestacados = {
+            "postres": [
+                { "nombre": "Brochetas de pollo de calabaza", "descripcion": "carne es baja en grasa y en calorías, y sirve casi de brunch por sus ingredientes.", "precio": "$7.000" },
+                { "nombre": "Crumble de manzana con maiz", "descripcion": "a base de manzanas, azúcar, canela y una cobertura desmenuzada de harina, mantequilla y azúcar.", "precio": "$3.000" },
+                { "nombre": "Berenjenas a la parmesana", "descripcion": "Berenjenas, tomate, queso, cebolla y albahaca… ¡Bocato di cardinale!", "precio": "$8.500" }
+            ]
+        };
+
+        // Función para mostrar la alerta con los datos JSON
+        function mostrarAlertaJSON() {
+            let content = postresDestacados.postres.map(postre => `
+                <strong>${postre.nombre}</strong>: ${postre.descripcion} - Precio: ${postre.precio}
+            `).join('<br>');
+            
+            Swal.fire({
+                title: 'Postres Destacados',
+                html: content,
+                icon: 'info',
+                confirmButtonText: 'Cerrar'
+            });
+        }
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="./carrito.js"></script>
 </body>
-
-</html>

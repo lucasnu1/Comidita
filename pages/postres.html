@@ -70,6 +70,9 @@
         </nav>
     </header>
     <main>
+        <div class="text-center mt-4">
+            <button class="btn btn-success" onclick="mostrarAlertaJSON()">Ver Postres Destacados</button>
+        </div>
         <div class="container mt-5">
             <h2>Postres Frescos</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -128,6 +131,7 @@
                     </div>
                 </div>
             </div>
+            
             <h2>Nuestros mas elegidos</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
@@ -365,11 +369,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="../carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- JSON datos (puede estar en un archivo separado, pero aquí lo haremos inline para simplicidad) -->
+    <script>
+        const postresDestacados = {
+            "postres": [
+                { "nombre": "Flan de Vainilla", "descripcion": "Un flan clásico, suave y delicioso", "precio": "$3.500" },
+                { "nombre": "Tiramisú", "descripcion": "Postre italiano con queso mascarpone y café", "precio": "$5.000" },
+                { "nombre": "Cheesecake", "descripcion": "Pastel de queso con base de galleta", "precio": "$6.000" }
+            ]
+        };
+
+        // Función para mostrar la alerta con los datos JSON
+        function mostrarAlertaJSON() {
+            let content = postresDestacados.postres.map(postre => `
+                <strong>${postre.nombre}</strong>: ${postre.descripcion} - Precio: ${postre.precio}
+            `).join('<br>');
+            
+            Swal.fire({
+                title: 'Comidas Destacadas',
+                html: content,
+                icon: 'info',
+                confirmButtonText: 'Cerrar'
+            });
+        }
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="../carrito.js"></script>
 </body>
 
 </html>
